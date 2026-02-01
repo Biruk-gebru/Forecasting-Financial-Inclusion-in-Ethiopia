@@ -7,7 +7,10 @@ __pycache__/
 .ipynb_checkpoints
 
 # Data
-data/
+data/raw/
+data/processed/
+data/reportdata/figures/
+data/reportdata/summaries/
 *.csv
 *.xlsx
 *.xls
