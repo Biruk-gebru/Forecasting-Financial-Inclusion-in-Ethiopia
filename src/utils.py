@@ -13,6 +13,28 @@ import matplotlib.pyplot as plt
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+def get_key_events() -> pd.DataFrame:
+    """
+    Returns a DataFrame of key financial inclusion events in Ethiopia (2020-2025).
+    Enriched based on comprehensive web search.
+    """
+    events_data = [
+        {'date': '2020-01-01', 'event': 'NBE Directives ONPS/01 & 02 (Non-bank Issuers)', 'category': 'Regulation', 'impact': 'High'},
+        {'date': '2020-06-01', 'event': 'Digital Ethiopia 2025 Strategy Launch', 'category': 'Policy', 'impact': 'Medium'},
+        {'date': '2021-01-01', 'event': 'NFIS II Launch (70% Goal)', 'category': 'Policy', 'impact': 'Medium'},
+        {'date': '2021-05-11', 'event': 'Telebirr Launch', 'category': 'Product', 'impact': 'High'},
+        {'date': '2022-08-01', 'event': 'Telebirr Digital Services (Credit/Savings)', 'category': 'Product', 'impact': 'High'},
+        {'date': '2023-08-01', 'event': 'M-Pesa Ethiopia Launch', 'category': 'Product', 'impact': 'High'},
+        {'date': '2025-02-01', 'event': 'Foreign Bank Entry Directive', 'category': 'Regulation', 'impact': 'Medium'},
+        {'date': '2025-05-01', 'event': 'M-Pesa Lite Launch', 'category': 'Product', 'impact': 'Medium'},
+        {'date': '2025-06-01', 'event': 'Mandatory Digital Payment Directive', 'category': 'Regulation', 'impact': 'High'},
+        {'date': '2025-10-01', 'event': 'EthSwitch Interoperability Integration', 'category': 'Infrastructure', 'impact': 'High'}
+    ]
+    df = pd.DataFrame(events_data)
+    df['date'] = pd.to_datetime(df['date'])
+    return df
+
+
 def save_fig(fig_name: str, path: str = '../data/reportdata/figures', dpi: int = 300, bbox_inches: str = 'tight') -> None:
     """
     Save figure to reportdata/figures directory with error handling.
