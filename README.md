@@ -2,7 +2,7 @@
 
 A data-driven project to analyze historical trends, model policy impacts, and forecast the future of financial inclusion in Ethiopia. This repository contains the end-to-end pipeline from data enrichment to an interactive dashboard.
 
-![Dashboard Preview](dashboard/screenshot.png)
+![Dashboard Preview](data/reportdata/Dash3.png)
 
 ## 📌 Project Overview
 Financial inclusion is a key driver of economic development. This project aims to impact decision-making by providing:
